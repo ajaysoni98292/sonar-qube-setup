@@ -68,7 +68,7 @@ you will see list of folder with OS names. Select your operting system and then 
 
 **Step - 11** Right click on the startSonar file and run as administrator. You make sure your server is up. 
 
-**Step - 11** Now go to the maven project and write the 
+**Step - 12** Now go to the maven project and write the 
 
 > mvn clean install -Psonar sonar:sonar
 
