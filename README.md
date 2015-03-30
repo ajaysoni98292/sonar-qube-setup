@@ -60,7 +60,15 @@ C:\Windows\System32>mysql -uroot -pajay
 >  
 mysql> grant usage on *.* to sonar@localhost identified by 'sonar';
 
-**Step - 10** Now go to the maven project and write the 
+**Step - 10** Now everything is done. Now start the sonar qube for this go to the 
+
+> C:\Program Files\sonarqube-5.0\bin
+
+you will see list of folder with OS names. Select your operting system and then you see some files.
+
+**Step - 11** Right click on the startSonar file and run as administrator. You make sure your server is up. 
+
+**Step - 11** Now go to the maven project and write the 
 
 > mvn clean install -Psonar sonar:sonar
 
