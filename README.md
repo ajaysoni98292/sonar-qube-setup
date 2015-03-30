@@ -62,7 +62,9 @@ and hit the enter you see your project is successfully build. and open the link
 
 > http://localhost:9000/ 
 
-you see your  project listed in over there ![enter image description here][1]
+you see your  project listed in sonar qube 
+
+ ![enter image description here][1]
 
 
   [1]: http://i.stack.imgur.com/knkRp.jpg
