@@ -16,16 +16,13 @@ and you see sonar.properties file.
 ![enter image description here][2] 
 
 
-  [1]: http://www.sonarqube.org/downloads/
-  [2]: http://i.stack.imgur.com/psKSp.jpg
-
 In my case i am using the mysql database so i have given the sonar.jdbc.url is 
 
 > sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
 
-Step 5 - Now save the sonar.properties. Make sure no other changes you should do in this file.
+**Step 5** - Now save the sonar.properties. Make sure no other changes you should do in this file.
 
-Step 6 - Now you should open the setting.xml file for your maven project or you can write the properties in pom.xml file. You can choose any option. Difference is only that setting.xml is available to all the projects.
+**Step 6** - Now you should open the setting.xml file for your maven project or you can write the properties in pom.xml file. You can choose any option. Difference is only that setting.xml is available to all the projects.
 
         <profiles>
         <profile>
@@ -45,4 +42,27 @@ Step 6 - Now you should open the setting.xml file for your maven project or you 
 Make sure you don't change the sonar username and password from the profile.
 I already mentioned that this profile can be in pom.xml or can be in setting.xml.
 
-**Step 7** - Now you all the configurations are done. NO  
+**Step 7** - Now you all the configurations are done. NO other thins you to do in configuration. 
+
+**Step 8** - Now you have to create a user with name sonar and password with sonar. so for this you have to open mysql and write some scripts as below
+
+> 
+C:\Windows\System32>mysql -uroot -pajay
+
+> mysql> CREATE USER 'sonar'@'localhost' IDENTIFIED BY 'sonar';
+>  
+mysql> grant usage on *.* to sonar@localhost identified by 'sonar';
+
+**Step - 9** Now go to the maven project and write the 
+
+> mvn clean install -Psonar sonar:sonar
+
+and hit the enter you see your project is successfully build. and open the link
+ 
+
+> http://localhost:9000/ 
+
+you see your  project listed in over there ![enter image description here][1]
+
+
+  [1]: http://i.stack.imgur.com/knkRp.jpg
