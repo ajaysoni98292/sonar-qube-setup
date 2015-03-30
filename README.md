@@ -13,7 +13,7 @@ and you see sonar.properties file.
 
 **Step 4** - Now you see the sonar's properties in sonar.properties file. Uncomment the sonar.jdbc.url. Actually you have seen there are many sonar.jdbc.url are shown according to different different databases. Uncomment only sonar.jdbc.url which you want to use for saving the sonar related data.
 
-![enter image description here][2] 
+![enter image description here][2]
 
 
 In my case i am using the mysql database so i have given the sonar.jdbc.url is 
@@ -64,7 +64,9 @@ and hit the enter you see your project is successfully build. and open the link
 
 you see your  project listed in sonar qube 
 
- ![enter image description here][1]
+ ![enter image description here][3]
 
 
   [1]: http://i.stack.imgur.com/knkRp.jpg
+  [2]: http://i.stack.imgur.com/Ru7Im.jpg
+  [3]: http://i.stack.imgur.com/knkRp.jpg
