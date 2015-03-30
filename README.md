@@ -42,9 +42,16 @@ In my case i am using the mysql database so i have given the sonar.jdbc.url is
 Make sure you don't change the sonar username and password from the profile.
 I already mentioned that this profile can be in pom.xml or can be in setting.xml.
 
-**Step 7** - Now you all the configurations are done. NO other thins you to do in configuration. 
+**Step 7** - Now you have to add the maven dependency of the database connector. Here i am using the mysql so i have added the 
 
-**Step 8** - Now you have to create a user with name sonar and password with sonar. so for this you have to open mysql and write some scripts as below
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.6</version>
+           </dependency>
+**Step 8** - Now you all the configurations are done. NO other thins you to do in configuration. 
+
+**Step 9** - Now you have to create a user with name sonar and password with sonar. so for this you have to open mysql and write some scripts as below
 
 > 
 C:\Windows\System32>mysql -uroot -pajay
@@ -53,7 +60,7 @@ C:\Windows\System32>mysql -uroot -pajay
 >  
 mysql> grant usage on *.* to sonar@localhost identified by 'sonar';
 
-**Step - 9** Now go to the maven project and write the 
+**Step - 10** Now go to the maven project and write the 
 
 > mvn clean install -Psonar sonar:sonar
 
